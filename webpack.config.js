@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -16,17 +16,16 @@ module.exports = {
       },
     ],
   },
-   devServer: {
+  devServer: {
     static: './dist',
   },
-   plugins: [
+  plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
   ],
-    optimization: {
+  optimization: {
     runtimeChunk: 'single',
   },
-  mode: 'development'
+  mode: 'development',
 };
-
